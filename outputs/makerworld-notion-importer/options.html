@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MakerWorld to Notion Settings</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="app">
+      <h1>Extension Settings</h1>
+
+      <section class="panel">
+        <label for="token">Notion API Token</label>
+        <input id="token" type="password" />
+      </section>
+
+      <section class="panel">
+        <label for="database-id">Notion Database ID</label>
+        <input id="database-id" type="text" />
+      </section>
+
+      <section class="panel">
+        <label class="checkbox-row">
+          <input id="enforce-license" type="checkbox" />
+          <span>Default to blocking restricted commercial licenses</span>
+        </label>
+      </section>
+
+      <section class="panel">
+        <label class="checkbox-row">
+          <input id="enforce-max-print-time" type="checkbox" />
+          <span>Default to blocking products over 8 hours print time</span>
+        </label>
+      </section>
+
+      <section class="actions">
+        <button id="save" class="primary">Save</button>
+        <span id="message" class="muted"></span>
+      </section>
+    </main>
+
+    <script src="options.js"></script>
+  </body>
+  </html>

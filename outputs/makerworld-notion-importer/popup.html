@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MakerWorld to Notion</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="header">
+        <h1>MakerWorld to Notion</h1>
+        <button id="open-options" class="ghost">Settings</button>
+      </header>
+
+      <section id="status" class="panel status">Loading current product...</section>
+
+      <section id="product-card" class="panel hidden">
+        <h2 id="product-title"></h2>
+        <p id="product-meta" class="muted"></p>
+        <p id="product-profile" class="muted"></p>
+        <p id="product-license" class="muted"></p>
+        <p id="product-duplicate" class="muted"></p>
+      </section>
+
+      <section class="panel">
+        <label class="checkbox-row">
+          <input id="enforce-license" type="checkbox" />
+          <span>Block import when commercial license looks restricted</span>
+        </label>
+        <label class="checkbox-row">
+          <input id="enforce-max-print-time" type="checkbox" />
+          <span>Block products over 8 hours print time</span>
+        </label>
+      </section>
+
+      <section class="panel">
+        <div class="queue-header">
+          <strong>Queue</strong>
+          <span id="queue-count" class="muted">0 items</span>
+        </div>
+        <div id="queue-list" class="queue-list">
+          <p class="muted">No queued products yet.</p>
+        </div>
+      </section>
+
+      <section class="actions">
+        <button id="refresh" class="ghost">Refresh</button>
+        <button id="queue" class="ghost" disabled>Add to Queue</button>
+        <button id="import" class="primary" disabled>Import Current</button>
+        <button id="import-queue" class="primary" disabled>Import Queue</button>
+      </section>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+  </html>

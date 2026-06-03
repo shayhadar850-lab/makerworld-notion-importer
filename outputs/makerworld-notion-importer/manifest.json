@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "MakerWorld to Notion Importer",
+  "version": "0.2.0",
+  "description": "Import MakerWorld product pages and listing cards into a Notion database.",
+  "permissions": ["storage", "activeTab", "scripting", "tabs"],
+  "host_permissions": [
+    "https://makerworld.com/*",
+    "https://api.notion.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "MakerWorld to Notion",
+    "default_popup": "popup.html"
+  },
+  "options_page": "options.html",
+  "content_scripts": [
+    {
+      "matches": ["https://makerworld.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

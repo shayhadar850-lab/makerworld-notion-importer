@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 360px;
+  font-family: "Segoe UI", sans-serif;
+  background: #f5f0e8;
+  color: #1f1b16;
+}
+
+.app {
+  padding: 14px;
+}
+
+.header,
+.actions,
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.panel {
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 14px;
+  background: #fffaf2;
+  border: 1px solid #e4d6c5;
+}
+
+.status {
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.muted {
+  margin: 8px 0 0;
+  font-size: 12px;
+  line-height: 1.45;
+  color: #5c5145;
+}
+
+.actions {
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+
+button {
+  border: 0;
+  border-radius: 12px;
+  padding: 10px 12px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+button.primary {
+  background: #1f7a54;
+  color: white;
+}
+
+button.ghost {
+  background: #e9ddcf;
+  color: #2c241c;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.hidden {
+  display: none;
+}
+
+.queue-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.queue-list {
+  margin-top: 10px;
+  display: grid;
+  gap: 8px;
+  max-height: 180px;
+  overflow: auto;
+}
+
+.queue-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  background: #f6eee2;
+}
+
+.queue-item strong {
+  display: block;
+  font-size: 12px;
+}
+
+.queue-item span {
+  display: block;
+  margin-top: 4px;
+  font-size: 11px;
+  color: #5c5145;
+}
+
+.queue-item button {
+  padding: 6px 8px;
+  font-size: 11px;
+}
